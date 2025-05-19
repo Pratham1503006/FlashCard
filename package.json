@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "clean": "rimraf .next out build",
+    "build": "npm run clean && next build",
+    "start": "npx serve@latest ./build/export",
     "lint": "next lint"
   },
   "dependencies": {
@@ -69,3 +70,4 @@
     "zod": "^3.23.8"
   }
 }
+
